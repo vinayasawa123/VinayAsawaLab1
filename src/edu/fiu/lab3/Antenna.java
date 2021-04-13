@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package edu.fiu.lab3;
+
+import edu.fiu.sysdesign.SelfCheckCapable;
+import edu.fiu.sysdesign.SelfCheckUtils;
+
+/**
+ * @author 18135
+ *
+ */
+public abstract class Antenna implements SelfCheckCapable {
+
+Memory mymemory;
+Orbiter myorbiter;
+	
+	public Antenna()
+	{
+		mymemory = new Memory();
+		myorbiter = new Orbiter();
+	}
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.00005);
+	}
+
+	@Override
+	public boolean runSelfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.checkComponents(this,mymemory);
+	}
+
+	
+	
+	
+
+}

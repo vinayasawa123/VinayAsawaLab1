@@ -17,6 +17,8 @@ public class rover {
 	int temperature_control; 
 	int neck;
 	
+	
+	
 	/** 
 	 * int arm is length of arm
 	 * int body is length of body
