@@ -36,6 +36,8 @@ public class UHFA extends Antenna {
 	public void receive_confirmation() {
 		// TODO Auto-generated method stub
 		System.out.println("Confirmation Received/////END of rover to orbitor");
+		myorbiter.receive_signal();
+		myorbiter.Transmit_data();
 	}
 
 }

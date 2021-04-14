@@ -56,14 +56,14 @@ public class Rover_Brain implements SelfCheckCapable {
 		// TODO Auto-generated method stub
 		Rover_Brain myroverbrain = new Rover_Brain();
 		myroverbrain.runSelfCheck();
-		myroverbrain.Self_Check();
+		myroverbrain.Start_Process();
 	}
 
 
 
 
 
-	private void Self_Check() {
+	private void Start_Process() {
 		// TODO Auto-generated method stub
 		mymc.Move_Cam_Axis();
 		mymc.ThreeD_Picture();
