@@ -21,9 +21,9 @@ public class Rover_Brain implements SelfCheckCapable {
     
     public Rover_Brain()
     {
-    	mymemory = new Memory();
-    
     	myuhfa = new UHFA();
+    	mymemory = new Memory();
+    	
     
     	mymc = new Mast_Cam();
     }
