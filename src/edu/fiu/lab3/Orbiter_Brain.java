@@ -12,12 +12,12 @@ import edu.fiu.sysdesign.SelfCheckUtils;
  */
 public class Orbiter_Brain implements SelfCheckCapable {
 	Orbiter myorbiter;
-	
+	Earth_Satellite myEarth_Satellite;
 
 	   public Orbiter_Brain()
 	{
 		myorbiter =  new Orbiter();
-		
+		myEarth_Satellite = new Earth_Satellite();
 		}
 	@Override
 	public String getComponentName() {
