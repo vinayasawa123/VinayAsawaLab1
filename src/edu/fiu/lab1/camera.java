@@ -22,7 +22,7 @@ int obstacle_locator;
 void take_picture()
 {
 	/**
-	 * take picture or a photo
+	 * take picture or a photo ///
 	 */
 }
 
