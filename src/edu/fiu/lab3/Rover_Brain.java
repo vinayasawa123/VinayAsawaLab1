@@ -63,7 +63,8 @@ public class Rover_Brain implements SelfCheckCapable {
 
 
 
-	private void Start_Process() {
+	private void Start_Process()
+	{
 		// TODO Auto-generated method stub
 		mymc.Move_Cam_Axis();
 		mymc.ThreeD_Picture();
@@ -71,7 +72,7 @@ public class Rover_Brain implements SelfCheckCapable {
 		myuhfa.Antennacheck();
 		myuhfa.Orbitor_Connection();
 		mymemory.Transfer_Data();
-		myuhfa.receive_confirmation();
+	   // myuhfa.receive_confirmation();
 	}
 
 }

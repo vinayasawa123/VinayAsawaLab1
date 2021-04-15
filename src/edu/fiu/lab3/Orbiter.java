@@ -33,16 +33,12 @@ public class Orbiter implements SelfCheckCapable {
 		return SelfCheckUtils.checkComponents(this);
 	}
 
-	public void receive_data() {
-		// TODO Auto-generated method stub
-		System.out.println("Data received from mars antenna");
-		Orbiter myorbiter = new Orbiter();
-		myorbiter.send_confirmation();
-	}
-	private void send_confirmation() {
+	
+	public void send_confirmation() {
 		// TODO Auto-generated method stub
 		System.out.println("Sending Confirmation to mars antenna");
-		
+		UHFA myuhfa = new UHFA();
+		myuhfa.Final_bit();
 	}
 
 	public void receive_signal() {
@@ -56,13 +52,20 @@ public class Orbiter implements SelfCheckCapable {
 	public void Transmit_data() {
 		// TODO Auto-generated method stub
 		System.out.println("Sending data to Earth");
-		Earth_Satellite.Receivedata();
+		Earth_Satellite myearth = new Earth_Satellite();
+		myearth.Receivedata();
 		
 	}
 
 	public static void receive_confirmation() {
 		// TODO Auto-generated method stub
 		System.out.println("Data confirmation received");
+	}
+
+	public void receive_data() {
+		// TODO Auto-generated method stub
+		System.out.println("data received");
+		
 	}
 
 	

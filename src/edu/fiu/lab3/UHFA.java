@@ -30,14 +30,17 @@ public class UHFA extends Antenna {
 	public void Transmit_Data() {
 		// TODO Auto-generated method stub
 		System.out.println("Sending Data to Oribter");
-		myorbiter.receive_data();
+		myorbiterbrain.receive_summary_mars();
 	}
 
-	public void receive_confirmation() {
+	public void Final_bit() {
 		// TODO Auto-generated method stub
-		System.out.println("Confirmation Received/////END of rover to orbitor");
-		myorbiter.receive_signal();
-		myorbiter.Transmit_data();
+		System.out.println("Final bit received and end of rover to satellite");
+		Earth_Satellite myearthsatellite = new Earth_Satellite();
+		myearthsatellite.sendsignal();
+		
 	}
+	
+	
 
 }

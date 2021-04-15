@@ -30,16 +30,24 @@ public class Earth_Satellite implements SelfCheckCapable {
 		return SelfCheckUtils.checkComponents(this);
 	}
 
-	public static   void Receivedata() {
+	public    void Receivedata() {
 		// TODO Auto-generated method stub
 		System.out.println("Data Received From Mars Orbiter");
-		Earth_Satellite.Send_Confirmation();
+		Earth_Satellite myearthsatellite = new Earth_Satellite();
+		myearthsatellite.Send_Confirmation();
 	}
 
-	private static  void Send_Confirmation() {
+	private   void Send_Confirmation() {
 		// TODO Auto-generated method stub
 		System.out.println("Sending Confirmation to mars orbiter");
 		Orbiter.receive_confirmation();
+	}
+
+	public void sendsignal() {
+		// TODO Auto-generated method stub
+		Orbiter_Brain myorbiterbrain = new Orbiter_Brain();
+		System.out.println("Sending signal from earth");
+		myorbiterbrain.Catchsignal();
 	}
 
 }

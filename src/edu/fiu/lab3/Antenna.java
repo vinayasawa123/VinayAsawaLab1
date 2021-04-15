@@ -14,11 +14,13 @@ public abstract class Antenna implements SelfCheckCapable {
 
 Memory mymemory;
 Orbiter myorbiter;
+Orbiter_Brain myorbiterbrain;
 	
 	public Antenna()
 	{
 		mymemory = new Memory();
 		myorbiter = new Orbiter();
+	 myorbiterbrain = new Orbiter_Brain();
 	}
 	public boolean selfCheck() {
 		// TODO Auto-generated method stub

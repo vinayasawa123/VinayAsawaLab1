@@ -37,20 +37,16 @@ public class Orbiter_Brain implements SelfCheckCapable {
 		return SelfCheckUtils.checkComponents(this,myorbiter);
 	}
    
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 	
-		
-		Orbiter_Brain myorbiterbrain = new Orbiter_Brain();
-		myorbiterbrain.runSelfCheck();
-		myorbiterbrain.Startreceiving();
-		
-		
-		
-	}
-	private void Startreceiving() {
+	public void receive_summary_mars() {
 		// TODO Auto-generated method stub
+		System.out.println("Starting the receiving process");
 		myorbiter.receive_data();
-		
+		myorbiter.send_confirmation();
+	}
+	public void Catchsignal() {
+		// TODO Auto-generated method stub
+		System.out.println("Signal Received from earth");
+		myorbiter.Transmit_data();
 	}
 }
