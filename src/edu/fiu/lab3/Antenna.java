@@ -41,7 +41,7 @@ public Antenna()
 	@Override
 	public String getComponentName() {
 		// TODO Auto-generated method stub
-		return "Anetnna";
+		return "Anetnna class";
 	}
 
 	
