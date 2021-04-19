@@ -32,6 +32,8 @@ public class Earth_Satellite implements SelfCheckCapable {
 
 	public    void Receivedata() {
 		// TODO Auto-generated method stub
+		// reveice data from mars orbiter and later inoves the confirmation 
+		
 		System.out.println("Data Received From Mars Orbiter");
 		Earth_Satellite myearthsatellite = new Earth_Satellite();
 		myearthsatellite.Send_Confirmation();

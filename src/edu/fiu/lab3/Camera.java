@@ -18,7 +18,9 @@ public abstract class Camera implements SelfCheckCapable {
 			mymemory = new Memory();
 		}
 	
-
+///  just a super class to mast camera 
+		
+		
 	@Override
 	public boolean selfCheck() {
 		// TODO Auto-generated method stub

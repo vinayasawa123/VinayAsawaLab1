@@ -15,16 +15,16 @@ import edu.fiu.sysdesign.SelfCheckUtils;
 public class Rover_Brain implements SelfCheckCapable {
 	
     Memory mymemory;
+    Antenna myantenna;
     UHFA myuhfa;
     Mast_Cam mymc;
     
     
     public Rover_Brain()
     {
+    	
     	myuhfa = new UHFA();
     	mymemory = new Memory();
-    	
-    
     	mymc = new Mast_Cam();
     }
     
@@ -54,25 +54,27 @@ public class Rover_Brain implements SelfCheckCapable {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		Rover_Brain myroverbrain = new Rover_Brain();
 		myroverbrain.runSelfCheck();
-		myroverbrain.Start_Process();
+Antenna myant = new Antenna();
+myant.runSelfCheck();
+
+		myroverbrain.Start_Process(); //starts the overall process
 	}
-
-
-
 
 
 	private void Start_Process()
 	{
 		// TODO Auto-generated method stub
-		mymc.Move_Cam_Axis();
-		mymc.ThreeD_Picture();
-		mymc.Store_Picture();
-		myuhfa.Antennacheck();
-		myuhfa.Orbitor_Connection();
-		mymemory.Transfer_Data();
-	   // myuhfa.receive_confirmation();
+		
+		mymc.Move_Cam_Axis(); // to fix cam axis
+		mymc.ThreeD_Picture(); // to take 3d picture
+		mymc.Store_Picture(); // to store picture
+		myuhfa.Antennacheck(); // to check antenna 
+		myuhfa.Orbitor_Connection();// for orbitor connection
+		mymemory.Transfer_Data(); // to initiate data transfer
+	    
 	}
 
 }

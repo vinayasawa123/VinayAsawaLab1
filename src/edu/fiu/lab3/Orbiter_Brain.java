@@ -15,7 +15,7 @@ public class Orbiter_Brain implements SelfCheckCapable {
 	Earth_Satellite myEarth_Satellite;
 
 	   public Orbiter_Brain()
-	{
+	    {
 		myorbiter =  new Orbiter();
 		myEarth_Satellite = new Earth_Satellite();
 		}
@@ -40,12 +40,18 @@ public class Orbiter_Brain implements SelfCheckCapable {
 	
 	public void receive_summary_mars() {
 		// TODO Auto-generated method stub
+		// reveive the mars rover summary and  starts the reveiceing on orbiter antenna 
+		
 		System.out.println("Starting the receiving process");
 		myorbiter.receive_data();
+		
+		// also later when data is received send the confirmation 
 		myorbiter.send_confirmation();
 	}
 	public void Catchsignal() {
 		// TODO Auto-generated method stub
+		// To catch the earth signal from earth dish or satellite.
+		// then start enrth side transmition.
 		System.out.println("Signal Received from earth");
 		myorbiter.Transmit_data();
 	}

@@ -10,18 +10,21 @@ import edu.fiu.sysdesign.SelfCheckUtils;
  * @author 18135
  *
  */
-public abstract class Antenna implements SelfCheckCapable {
+public class Antenna implements SelfCheckCapable {
 
 Memory mymemory;
 Orbiter myorbiter;
 Orbiter_Brain myorbiterbrain;
 	
-	public Antenna()
-	{
-		mymemory = new Memory();
-		myorbiter = new Orbiter();
-	 myorbiterbrain = new Orbiter_Brain();
-	}
+public Antenna()
+{
+	mymemory = new Memory();
+	myorbiter = new Orbiter();
+ myorbiterbrain = new Orbiter_Brain();
+}
+	
+
+	
 	public boolean selfCheck() {
 		// TODO Auto-generated method stub
 		return SelfCheckUtils.randomCheck(0.00005);
@@ -30,7 +33,15 @@ Orbiter_Brain myorbiterbrain;
 	@Override
 	public boolean runSelfCheck() {
 		// TODO Auto-generated method stub
-		return SelfCheckUtils.checkComponents(this,mymemory);
+		return SelfCheckUtils.checkComponents(this,mymemory,myorbiter,myorbiterbrain);
+	}
+
+
+
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "Anetnna";
 	}
 
 	
